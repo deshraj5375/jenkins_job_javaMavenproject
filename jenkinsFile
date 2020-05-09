@@ -1,9 +1,17 @@
 node()
 {
 
+mvn=tool 'm3'
 stage('checkout')
 {
+    sh 'rm -rf *'
     checkout scm
+}
+
+stage('Complie and package')
+{
+ sh 'mvn package'
+
 }
 
 }
