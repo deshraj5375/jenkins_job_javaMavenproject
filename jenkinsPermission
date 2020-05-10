@@ -1,0 +1,4 @@
+jenkins to docker :
+sudo usermod -a -G docker jenkins
+sudo usermod -a -G jenkins jenkins
+docker and jenkins service restart
