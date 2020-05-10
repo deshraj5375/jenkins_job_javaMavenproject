@@ -15,10 +15,15 @@ stage('Complie and package')
 
 stage('build docker file')
 {
+
 sh '''
  mkdir dockerimage
  cd dockerimage
  cp $WORKSPACE/target/*.jar .
+ cp $WORKSPACE/Dockerfile .
+ echo "Building image"
+docker build -t app:$BUILD_NUMBER . 
+
  '''
 }
 
