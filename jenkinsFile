@@ -21,9 +21,9 @@ sh '''
  cd dockerimage
  cp $WORKSPACE/target/*.jar .
  cp $WORKSPACE/Dockerfile .
- echo "Building image"
- #docker build -t app:$BUILD_NUMBER . '''
-
+ #docker build -t app:$BUILD_NUMBER . 
+ '''
+echo "Building in progress"
  dockerImage = docker.build("app:${BUILD_NUMBER}")
 
  
