@@ -24,9 +24,7 @@ sh '''
  #docker build -t app:$BUILD_NUMBER . 
  '''
 echo "Building in progress"
- dockerImage = docker.build("app:${BUILD_NUMBER}")
-
- 
+ dockerImage = docker.build("app:${BUILD_NUMBER} ${WORKSPACE}/dockerimage/")
 
 }
 
