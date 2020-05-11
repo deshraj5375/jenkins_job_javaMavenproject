@@ -34,7 +34,7 @@ stage('image uplaoding to hub')
 
     docker.withRegistry('', 'docker-hub') {
                         dockerImage.push()
-                        dockerImage.push('latest')
+                        dockerImage.push('latest') }
     
 }
 
