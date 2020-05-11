@@ -34,7 +34,10 @@ stage('image uplaoding to hub')
 
 stage('Deploying image')
 {
-    sh 'docker rm testDesh'
+    sh '''docker stop testDesh
+    docker rm testDesh
+    
+    '''
     sh ' docker run -d -p 5000:8080 --name testDesh deshraj5375/apptest:${BUILD_NUMBER} '
 }
 
