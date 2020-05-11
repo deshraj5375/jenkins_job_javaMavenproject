@@ -24,7 +24,7 @@ sh '''
  echo "Building image"
  #docker build -t app:$BUILD_NUMBER . '''
 
- dockerImage = docker.build(app:$BUILD_NUMBER)
+ dockerImage = docker.build("app:${BUILD_NUMBER}")
 
  
 
